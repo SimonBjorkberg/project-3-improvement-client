@@ -1,102 +1,63 @@
-import { Link } from "react-router-dom";
-import "./Categories.css";
-import { useContext } from "react";
-import { SearchContext } from "../../context/search.context";
+import businessIcon from '../../icons/businessIcon.png'
+import vehicleIcon from '../../icons/vehicleIcon.png'
+import furnitureIcon from '../../icons/furnitureIcon.png'
+import clothingIcon from '../../icons/clothingIcon.png'
+import electronicsIcon from '../../icons/electronicsIcon.png'
+import residenceIcon from '../../icons/residenceIcon.png'
 
 function Categories() {
-  const { setFilter, filter } = useContext(SearchContext);
-
-  const handleClick = (value) => {
-    if (value === filter) {
-      setFilter("");
-    } else {
-      setFilter(value);
-    }
-  };
-
   return (
     <div className="max-w-[676px] mx-auto mt-10">
-      <div className="flex flex-row flex-wrap gap-x-1 gap-y-1 mb-8 justify-center">
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("rompers")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Rompers
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("sleepsuits")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Sleepsuits
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("onesies")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Onesies
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("bodysuits")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Bodysuits
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("dresses")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Dresses
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("t-shirts")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            T-Shirts
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("pantsNleggings")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Pants & Leggings
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("sweatersNcardigans")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Sweaters & Cardigans
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("bibs")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Bibs
-          </button>
-        </Link>
-        <Link to="/products">
-          <button
-            onClick={() => handleClick("outerwear")}
-            className="text-white border border-white hover:bg-neutral-focus px-2.5 py-1.5 rounded-md font-light bg-neutral w-fit"
-          >
-            Outerwear
-          </button>
-        </Link>
+      <h1 className='font-bold text-xl text-left ml-3 mb-5'>Browse our categories</h1>
+      <div className="grid gap-2 grid-cols-8 font-light text-sm">
+        <div className="flex flex-col text-center hover:cursor-pointer h-fit w-16">
+          <div className='w-12 h-12 rounded-full bg-neutral-300 mx-auto hover:scale-105 transition-all duration-100'>
+            <img src={vehicleIcon} alt="" className="mx-auto p-2" />
+          </div>
+          <p>Vehicles</p>
+        </div>
+        <div className="flex flex-col text-center hover:cursor-pointer h-fit w-16">
+          <div className='w-12 h-12 rounded-full bg-neutral-300 mx-auto hover:scale-105 transition-all duration-100'>
+            <img src={furnitureIcon} alt="" className="mx-auto p-2" />
+          </div>
+          <p>Furniture</p>
+        </div>
+        <div className="flex flex-col text-center hover:cursor-pointer h-fit w-16">
+          <div className='w-12 h-12 rounded-full bg-neutral-300 mx-auto hover:scale-105 transition-all duration-100'>
+            <img src={residenceIcon} alt="" className="mx-auto p-2" />
+          </div>
+          <p>Residence</p>
+        </div>
+        <div className="flex flex-col text-center hover:cursor-pointer h-fit w-16">
+          <div className='w-12 h-12 rounded-full bg-neutral-300 mx-auto hover:scale-105 transition-all duration-100'>
+            <img src={clothingIcon} alt="" className="mx-auto p-2" />
+          </div>
+          <p>Clothing</p>
+        </div>
+        <div className="flex flex-col text-center hover:cursor-pointer h-fit w-16">
+          <div className='w-12 h-12 rounded-full bg-neutral-300 mx-auto hover:scale-105 transition-all duration-100'>
+            <img src={electronicsIcon} alt="" className="mx-auto p-2 w-4/5 h-full" />
+          </div>
+          <p>Electronics</p>
+        </div>
+        <div className="flex flex-col text-center hover:cursor-pointer h-fit w-16">
+          <div className='w-12 h-12 rounded-full bg-neutral-300 mx-auto hover:scale-105 transition-all duration-100'>
+            <img src={residenceIcon} alt="" className="mx-auto p-2" />
+          </div>
+          <p>Sports & Hobbies</p>
+        </div>
+        <div className="flex flex-col text-center hover:cursor-pointer h-fit w-16">
+          <div className='w-12 h-12 rounded-full bg-neutral-300 mx-auto hover:scale-105 transition-all duration-100'>
+            <img src={businessIcon} alt="" className="mx-auto p-2" />
+          </div>
+          <p>Business Related</p>
+        </div>
+        <div className="flex flex-col text-center hover:cursor-pointer h-fit w-16">
+          <div className='w-12 h-12 rounded-full bg-neutral-300 mx-auto hover:scale-105 transition-all duration-100'>
+            <img src={residenceIcon} alt="" className="mx-auto p-2" />
+          </div>
+          <p>Other</p>
+        </div>
       </div>
     </div>
   );

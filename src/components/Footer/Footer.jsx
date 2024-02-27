@@ -3,7 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className=" flex flex-row footer p-10 bg-neutral text-neutral-content justify-around">
+    <footer className=" flex flex-row footer p-10 bg-neutral-900 text-neutral-content justify-around">
       <div>
         <span className="footer-title">Services</span>
         <Link className="link link-hover">Branding</Link>

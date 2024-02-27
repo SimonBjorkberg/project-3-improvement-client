@@ -47,7 +47,7 @@ const Reviews = ({
   return (
     <div className="text-left py-10 bg-neutral-200">
       {userReviews?.length === 0 ? (
-        <div className="flex py-2 lg:w-[900px] mx-auto font-semibold">
+        <div className="flex py-2 lg:w-[900px] mx-auto">
           <p className="w-fit mx-auto">
             {foundUser.username} has not been reviewed yet!
           </p>
